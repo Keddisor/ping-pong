@@ -1,3 +1,3 @@
 # ping-pong
-Данная игра явлюется прототипом игры пинг-понг, написанном на языке Python при помощи библиотеки pygame.
-Она предназначена для 2 игроков: управление для первого игрока на клавишах WASD, для второго на стрелки.
+This game is a prototype of the ping-pong game, written in Python using the pygame library.
+It is designed for 2 players: the first player controls the WASD keys, the second player controls the arrow keys.
