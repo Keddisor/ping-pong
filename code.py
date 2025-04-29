@@ -18,9 +18,9 @@ class GameSprite(sprite.Sprite):
 class Playerone(GameSprite):
     def update(self):
         keys_pressed = key.get_pressed()
-        if keys_pressed[K_W] and self.rect.y > 0:
+        if keys_pressed[K_w] and self.rect.y > 0:
             self.rect.y -= self.speed
-        if keys_pressed[K_S] and self.rect.y < 425:
+        if keys_pressed[K_s] and self.rect.y < 425:
             self.rect.y += self.speed
 class Playertwo(GameSprite):
     def update(self):
@@ -61,3 +61,14 @@ playertwo = Playertwo('rocket.png', 650, 200, 15, 50, 75)
 winone = font.render('PLAYER ONE WIN', True, (124,252,0))
 wintwo = font.render('PLAYER TWO WIN', True, (124,252,0))
 ball = Ball('asteroid.png', 300, 200, 15, 50, 50)
+while game:
+    if run != False:
+        if finish != True:
+            window.blit(background, (0, 0))
+            playerone.reset()
+            playerone.update()
+            playertwo.reset()
+            playertwo.update()
+            ball.update()
+        display.update()
+        clock.tick(FPS)
